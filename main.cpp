@@ -7,18 +7,18 @@ using namespace std;
 struct mokinys
 {
     string vardas, pavarde;
-    int ND[100];
-
+    int egz;
+    double galutinis;
 
 }ID[100];
 
 int main()
 {
-    int i=1, j=0, k=0;
+    int i=1, j=0, k=0, a=0;
     while( i==1)
     {
         char tn;
-        cout << "Ar norite ávesti nauja mokini i sistema? (t/n): " << endl;
+        cout << "Ar norite ivesti nauja mokini i sistema? (t/n): " << endl;
         cin >> tn;
         if (tn == 'n')
         {
@@ -28,15 +28,21 @@ int main()
         {
             i=1;
             cout << "Mokinio vardas: " << endl;
-
-                cin >> ID[j++].vardas[j++];
+            cin >> ID[j++].vardas;
                 cout << "Mokinio pavarde: "<< endl;
-                cin >> ID[k++].pavarde[k++];
-                //cout << "Namu darbo pazymys (neigiams skaicius nutraukia ivedima): " << endl;
-               // int nr=1;
-               // ID[1].ND[1]=1;
-              //  while (ID[1].ND[nr]==0)
+                cin >> ID[k++].pavarde;
+                cout << "Egzamino balas: ";
+                cin >> ID[a++].egz;
 
+                int ND[100];
+                for (int h=0; h<99; h++)
+                {
+                    cout << "iveskite namu darbu pazymius (0 nutraukia ivedima): ";
+                    cin >> ND[h];
+                    if (ND[h]==0)
+                        break;
+
+                }
 
         }
     }
