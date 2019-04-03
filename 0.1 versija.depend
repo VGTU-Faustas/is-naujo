@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1553697812 source:c:\users\faustas\documents\github\antras bandymas\0.1 versija\main.cpp
+	<iostream>
+	<iomanip>
+	<string>
+
