@@ -14,7 +14,7 @@ struct mokinys
 
 int main()
 {
-    int i=1, j=0, k=0, a=0;
+    int i=1, j=0, k=0, a=0,b=0, m=0;
     while( i==1)
     {
         char tn;
@@ -33,14 +33,16 @@ int main()
                 cin >> ID[k++].pavarde;
                 cout << "Egzamino balas: ";
                 cin >> ID[a++].egz;
-
-                int ND[100];
+                int ND[100], tarpinis=0;
                 for (int h=0; h<99; h++)
                 {
                     cout << "iveskite namu darbu pazymius (0 nutraukia ivedima): ";
                     cin >> ND[h];
-                    if (ND[h]==0)
+                    if (ND[h]==0){
                         break;
+                        ID[b++].galutinis=(tarpinis+ID[m++].egz)/h;
+                    }
+                    tarpinis+ND[h];
 
                 }
 
