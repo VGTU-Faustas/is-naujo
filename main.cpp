@@ -51,14 +51,14 @@ int main()
 
         for (my z: lent){
             cout.width(20);
-            cout<<z.var;
+            cout<< left <<z.var;
             cout.width(20);
-            cout<<z.pav;
-            cout.width(20);
+            cout << left <<z.pav;
+            cout.width(19);
          //   for (int a: z.paz)
          //   cout<<a<<"; "<<endl;
            // cout<<endl;
-            cout<<v<<'\n';
+            cout<< right <<v<<'\n';
         }
     }
 
