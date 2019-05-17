@@ -5,6 +5,8 @@
 #include <iterator>
 #include <numeric>
 #include <algorithm>
+#include <fstream>
+#include <sstream>
 
 using namespace std;
 
@@ -21,7 +23,11 @@ double mediana(vector <int> paz);
 int main()
 {
     vector <my> lent;
-    my temp; int int_temp=1; char uzkl, uzkl2; my vid;
+    my temp; int int_temp=1; char uzkl, arfailas, uzkl2; my vid;
+
+    cout <<"Ar norite duomenis ivesti RANKINIU budu? (t/n)?"; cin >> arfailas; cout << endl;
+    if (arfailas=='t')
+    {
     do{
         int_temp=1;
 
@@ -60,6 +66,26 @@ int main()
            // cout<<endl;
             cout<< right <<v<<'\n';
         }
+    }
+        string line;
+        ifstream failas ("ivedimas.txt");
+        vector <my> db;
+        while(getline(failas, line))
+        {
+            std::stringstream str;
+            str<<line;
+            my temp; int temp_nd;
+            temp.paz.clear();
+            str<<temp.var; str<<temp.pav;
+            for(int i=0; i<6; i++)
+            {
+                str>>temp_nd;
+                temp.paz.push_back(temp_nd);
+            }
+            temp.kd=temp.paz.back();
+            temp.paz.pop_back();
+        }
+
     }
 
     double vidurkis( vector <int> paz)
