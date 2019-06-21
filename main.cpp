@@ -46,16 +46,36 @@ int main()
         while (uzkl!='n');
 
         cout<<"Vidurkis/mediana (v/m)?"; cin >>uzkl2;
-        if (uzkl2=='m') double v=mediana(temp.paz);
-                double v=vidurkis(temp.paz);
+        double v=0;
+        if (uzkl2=='m') v=mediana(temp.paz);
+                 v=vidurkis(temp.paz);
 
         cout << setfill ('_') << setw (60) << '\n' << setfill(' ');
         cout.width(20);
         cout<< left <<"VARDAS";cout.width(20);
         cout<< left << "PAVARDE";cout.width(19);
         cout<< right << "VIDURKIS" << '\n';
+        cout<< right <<v<<'\n';
+    }
 
-        for (my z: lent){
+        else{
+        string line;
+        vector <string> eilute;
+        ifstream failas ("ivedimas.txt");
+
+        while(getline(failas, line))
+        {
+            stringstream str;
+            str<<line;
+            eilute.push_back(line);
+        }
+        failas.close();
+
+        sort (eilute.begin()+1, eilute.end());
+        for(auto x : eilute)
+            cout<<x<<endl;
+        }
+         for (my z: lent){
             cout.width(20);
             cout<< left <<z.var;
             cout.width(20);
@@ -64,27 +84,9 @@ int main()
          //   for (int a: z.paz)
          //   cout<<a<<"; "<<endl;
            // cout<<endl;
-            cout<< right <<v<<'\n';
-        }
-    }
-        string line;
-        ifstream failas ("ivedimas.txt");
-        vector <my> db;
-        while(getline(failas, line))
-        {
-            std::stringstream str;
-            str<<line;
-            my temp; int temp_nd;
-            temp.paz.clear();
-            str<<temp.var; str<<temp.pav;
-            for(int i=0; i<6; i++)
-            {
-                str>>temp_nd;
-                temp.paz.push_back(temp_nd);
-            }
-            temp.kd=temp.paz.back();
-            temp.paz.pop_back();
-        }
+          //  cout<< right <<v<<'\n';
+                        }
+
 
     }
 

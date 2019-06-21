@@ -32,7 +32,7 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="main.cpp" />
+		<Unit filename="../vectorinis 0,1/main.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
