@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1561562871 source:c:\users\faustas\documents\cppnd\rondo\main.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	<fstream>
+	<iterator>
+	<sstream>
+	<cstdlib>
+	<ctime>
+	<vector>
+	<algorithm>
+
